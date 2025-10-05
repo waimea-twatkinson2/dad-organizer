@@ -1,0 +1,73 @@
+{% extends 'pages/base.jinja' %}
+
+
+{% block title %}
+
+    {{ item.name }}
+
+{% endblock %}
+
+
+{% block content %}
+<form action="/edit" method="POST"></form>
+    <h1><input
+                type="text"
+                name="name"
+                placeholder="Task name"
+                value="{{ item.name }}"
+                required
+            >
+            </h1>
+
+
+    <article class="item">
+             <div class="item-header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+        <input
+                type="text"
+                name="description"
+                placeholder="Description"
+                value="{{ item.description }}"
+                required
+            >
+            <input
+                type="DATE"
+                name="due_date"
+                placeholder="Date"
+                value="{{ item.due_date }}"
+                required
+            >
+            <input
+                type="text"
+                name="client"
+                placeholder="Client"
+                value="{{ item.client }}"
+                required
+            >
+        </div>
+        <div class="urgency">
+        <input
+                type="number"
+                name="urgency"
+                min="1"
+                max="5"
+                placeholder="Urgency (1-5)"
+                value="{{ item.urgency }}"
+                required
+            >
+        </div>
+        <button>Add Task!</button>
+        </form>
+    </div>
+        <footer>
+            <a href="/delete/{{ item.id }}" type="button" onclick="return confirm('Really delete?');">Delete</a>
+            <a href="/item/{{ item.id }}" type="button" >Back</a>
+        </footer>
+
+    </article>
+
+
+    <a role="button" href="/">Home</a>
+
+{% endblock %}
+

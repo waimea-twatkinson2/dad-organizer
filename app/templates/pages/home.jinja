@@ -1,38 +1,119 @@
-{#=====================================================
-  Home page
-  - Hero style greeting banner
-  - List of things passed in as 'things' array
-  - Form for adding a new thing
-=====================================================#}
-
 {% extends 'pages/base.jinja' %}
 
 
 {% block title %}
 
-    Flask Demo
+    Force Electric, To Do 
 
 {% endblock %}
 
 
 {% block content %}
 
-    <h1>Flask Demo App with Turso DB</h1>
+    <h1>Force Electric, To Do:</h1>
 
-    <p>This is a simple Flask app that connects to a Turso database to save and retrieve data. This can be used as the basis of your web app.</p>
+    <article>
 
-    <p>It includes...</p>
+        <ul>
+            {% for task in tasks if task.completed == 0%}
 
-    <ul>
-        <li>Example routes</li>
-        <li>Example static pages</li>
-        <li>Missing page and server error pages</li>
-        <li>DB connection and error handling</li>
-        <li>Example CRUD actions: Create and Delete</li>
-        <li>Flash messages for information</li>
-    </ul>
+                <li>
+                <article class="card">
+                <div>
+                    <p>{{task.urgency}} - {{ task.name }}</p>
+                </div>
+                <div>
+                <a href="/complete/{{ task.id }}" class="button">Complete</a>
+                <a href="/item/{{ task.id }}" class="button">View</a>
+                </div>
+                </article>
+                </li>
+                
 
-    <a href="/things" role="button">Go to the Things...</a>
+            {% else %}
+
+                <p>None!</p>
+
+            {% endfor %}
+        </ul>
+        
+        
+        </article>
+<article>
+        <h3>Add a New task</h3>
+<form action="/add" method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Name of Task"
+                required
+            >
+
+            <input
+                type="number"
+                name="urgency"
+                min="1"
+                max="5"
+                placeholder="Urgency (1-5)"
+                required
+            >
+            <input
+                type="text"
+                name="description"
+                placeholder="Description of Task"
+                required
+                >
+            <input
+                type="date"
+                name="due_date"
+                placeholder="Due Date"
+                required
+                >
+            <input
+                type="text"
+                name="client"
+                placeholder="Client"
+                required
+                >
+            <input
+                type="text"
+                name="location"
+                placeholder="Location"
+                required
+                >
+
+            <button>Add Task!</button>
+
+        </form></article>
+        <h3>Completed tasks</h3>
+        <article>
+
+        <ul>
+            {% for task in tasks if task.completed == 1 %}
+
+            <li>
+            <article class="compcard">
+            <div>
+                <p>{{task.urgency}} - {{ task.name }}</p>
+            </div>
+            <div>
+            <a href="/uncomplete/{{ task.id }}" class="button">Uncomplete</a>
+            <a href="/item/{{ task.id }}" class="button">View</a>
+            </div>
+            </article>
+            </li>
+            
+            {% else %}
+
+
+                <p>None!</p>
+
+            {% endfor %}
+        </ul>
+        
+        
+        </article>
 
 {% endblock %}
 

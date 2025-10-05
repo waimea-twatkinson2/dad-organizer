@@ -2,6 +2,87 @@
   User stylesheet - Building upon PicoCSS
 =====================================================*/
 
+/* Home Page --------------------------------------------- */
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--pico-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+}
+
+/* Task list layout */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    margin-bottom: 1rem;
+}
+
+/* Card styling */
+.card {
+    background-color: var(--pico-bg);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.compcard {
+    background-color: var(--pico-bg);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 1);
+}
+
+/* Info + action alignment */
+.task-info p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Button styling */
+.button {
+    display: inline-block;
+    background: var(--pico-primary);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s ease;
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #7599c2;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+}
+
 
 /* ABOUT PAGE -------------------------------------------- */
 

@@ -1,0 +1,38 @@
+{% extends 'pages/base.jinja' %}
+
+
+{% block title %}
+
+    {{ item.name }}
+
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>{{ item.name }}</h1>
+
+
+    <article class="item">
+             <div class="item-header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <p>{{ item.description }}</p>
+            <p>Due on {{ item.due_date }}</p>
+            <p>Job for {{ item.client }}</p>
+        </div>
+        <div class="urgency">
+            <p>{{ item.urgency }}</p>
+        </div>
+    </div>
+        <footer>
+            <a href="/delete/{{ item.id }}" type="button" onclick="return confirm('Really delete?');">Delete</a>
+            <a href="/edit/{{ item.id }}" type="button" >Edit</a>
+        </footer>
+
+    </article>
+
+
+    <a role="button" href="/">Home</a>
+
+{% endblock %}
+

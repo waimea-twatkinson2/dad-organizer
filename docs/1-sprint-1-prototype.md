@@ -14,7 +14,7 @@ Develop a prototype that simulates the key functionality of the system, then tes
 
 Replace this text with notes regarding the DB design.
 
-![SCREENSHOT OF DB DESIGN](screenshots/example.png)
+![SCREENSHOT OF DB DESIGN](screenshots/draw_sql.png)
 
 
 ---
@@ -25,17 +25,17 @@ The first stage of prototyping was to explore how the UI might 'flow' between st
 
 This Figma demo shows the initial design for the UI 'flow':
 
-**FIGMA FLOW - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT**
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/QL8eNwbdN6iFGzgjFqaNNI/Dad-work-thing?node-id=1-2&p=f&scaling=contain&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>
 
 ### Testing
 
-Replace this text with notes about what you did to test the UI flow and the outcome of the testing.
+I took my prototype to the end user and they gave me feedback
 
 ### Changes / Improvements
 
-Replace this text with notes any improvements you made as a result of the testing.
+Added a delete confirmation, and changed the colours
 
-*IMPROVED FIGMA FLOW - PLACE THE FIGMA EMBED CODE HERE - MAKE SURE IT IS SET SO THAT EVERYONE CAN ACCESS IT*
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/QL8eNwbdN6iFGzgjFqaNNI/Dad-work-thing?node-id=24-88&p=f&scaling=min-zoom&content-scaling=fixed&page-id=24%3A6&embed-host=share" allowfullscreen></iframe>
 
 
 ---
